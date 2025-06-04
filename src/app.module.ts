@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { MovieModule } from './movie/movie.module';
 import { ConfigModule } from '@nestjs/config';
 import { DatabaseModule } from './database/database.module';
+import { ReviewModule } from './review/review.module';
 import * as Joi from 'joi';
 
 @Module({
@@ -20,6 +21,7 @@ import * as Joi from 'joi';
     }),
     MovieModule,
     DatabaseModule,
+    ReviewModule,
   ],
   controllers: [AppController],
   providers: [],

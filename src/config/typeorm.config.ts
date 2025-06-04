@@ -1,6 +1,5 @@
 import { ConfigService } from '@nestjs/config';
 import { TypeOrmModuleOptions } from '@nestjs/typeorm';
-import { Movie } from '../movie/entities/movie.entity';
 
 export const getTypeOrmConfig = async (
   configService: ConfigService,
@@ -13,5 +12,4 @@ export const getTypeOrmConfig = async (
   database: configService.get<string>('nestjs'),
   autoLoadEntities: true,
   synchronize: true,
-  entities: [Movie],
 });
